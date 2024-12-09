@@ -1,0 +1,82 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: rgb(1, 19, 7);
+  text-align: center;
+  margin: 0;
+}
+
+/* Clock Container */
+.clock-container {
+  background-color: rgba(248, 12, 12, 0.6); /* Semi-transparent background */
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+  display: inline-block;
+}
+
+/* Clock Display */
+.clock {
+  font-size: 80px;
+  letter-spacing: 2px;
+  font-weight: 600;
+  background-color: #333;
+  padding: 20px 30px;
+  border-radius: 15px;
+  display: inline-block;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-in-out;
+}
+
+.clock:hover {
+  transform: scale(1.1); /* Slightly enlarge the clock on hover */
+}
+
+/* Stop Button */
+.stop-button {
+  background-color: #f1ed05;
+  color: rgb(3, 10, 2);
+  font-size: 20px;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  margin-top: 30px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.stop-button:hover {
+  background-color: #f80723;
+  transform: scale(1.1); /* Slightly enlarge the button on hover */
+}
+
+.stop-button:active {
+  background-color: #e60019;
+}
+
+
+@keyframes glow {
+  0% {
+      text-shadow: 0 0 10px #64f304, 0 0 20px #ffffff, 0 0 30px #ff0099, 0 0 40px #ff0099, 0 0 50px #ff0099, 0 0 75px #ff0099;
+  }
+  50% {
+      text-shadow: 0 0 20px #ffffff, 0 0 30px #ffffff, 0 0 40px #ff0099, 0 0 50px #ff0099, 0 0 75px #ff0099, 0 0 100px #ff0099;
+  }
+  100% {
+      text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ff0099, 0 0 40px #ff0099, 0 0 50px #ff0099, 0 0 75px #ff0099;
+  }
+}
+
+.clock {
+  animation: glow 1.5s ease-in-out infinite;
+}
